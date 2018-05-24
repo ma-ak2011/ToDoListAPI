@@ -33,7 +33,7 @@ namespace ReactToDoList.Controllers
             return Json(new { Result = "success" });
         }
 
-        [HttpPut]
+        [HttpPost]
         public IHttpActionResult Delete([FromBody]ToDoRequest model)
         {
             var toDomanager = new ToDoList.ToDoList();
