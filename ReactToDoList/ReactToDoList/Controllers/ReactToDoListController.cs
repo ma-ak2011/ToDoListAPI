@@ -5,26 +5,41 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Results;
+using System.Web.UI.WebControls;
 using ReactToDoList.Models;
+using ToDoList;
 
 namespace ReactToDoList.Controllers
 {
     
     public class ReactToDoListController : ApiController
     {
-        //database代わりにこの変数を使う。
-        public static List<ToDo> DataBase;
-
         [HttpGet]
-        public IHttpActionResult GetList()
+        public IHttpActionResult GetToDos()
         {
             //さすがにハイジャックはされたくなのでむき出しの配列では返さない。
-            return Json(new ListModel {UserList = new List<ToDo> 
-            {
-                new ToDo { Title = "パフォーマンス改善", Content = "検索画面が遅いのでいろいろ見てみる。"},
-                new ToDo { Title = "この間のキャンペーン", Content = "開発でテスト後本番に反映。"},
-                new ToDo { Title = "新機能", Content = "統計データをグラフで表示したい。"}
-            }}); 
+            var toDoList = new ToDoList.ToDoList().GetToDos()
+                .Select(t => new ToDo { id = t.Id, title = t.Title, content = t.Content})
+                .ToList();
+
+            return Json(new ListModel {UserList = toDoList }); 
+        }
+
+        [HttpPost]
+        public IHttpActionResult Add([FromBody]ToDoRequest model)
+        {
+            var toDomanager = new ToDoList.ToDoList();
+            toDomanager.AddToDo(model.title, model.content);
+            return Json(new { Result = "success" });
+        }
+
+        [HttpPut]
+        public IHttpActionResult Delete([FromBody]ToDoRequest model)
+        {
+            var toDomanager = new ToDoList.ToDoList();
+            toDomanager.DeleteToDo(model.id);
+
+            return Json(new { Result = "success" });
         }
     }
 }

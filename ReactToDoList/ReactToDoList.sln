@@ -5,6 +5,10 @@ VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReactToDoList", "ReactToDoList\ReactToDoList.csproj", "{F80B06F4-9E0B-49C3-930A-A59F4DE1255F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToDoList", "ToDoList\ToDoList.csproj", "{8EB3B931-6E89-45FC-841C-71A06F54DB77}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataBase", "DataBase\DataBase.csproj", "{AB952762-DE02-40F3-A246-061D0567F17B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{F80B06F4-9E0B-49C3-930A-A59F4DE1255F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F80B06F4-9E0B-49C3-930A-A59F4DE1255F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F80B06F4-9E0B-49C3-930A-A59F4DE1255F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8EB3B931-6E89-45FC-841C-71A06F54DB77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EB3B931-6E89-45FC-841C-71A06F54DB77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EB3B931-6E89-45FC-841C-71A06F54DB77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EB3B931-6E89-45FC-841C-71A06F54DB77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB952762-DE02-40F3-A246-061D0567F17B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB952762-DE02-40F3-A246-061D0567F17B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB952762-DE02-40F3-A246-061D0567F17B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB952762-DE02-40F3-A246-061D0567F17B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

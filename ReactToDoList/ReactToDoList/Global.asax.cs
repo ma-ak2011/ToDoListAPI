@@ -13,5 +13,10 @@ namespace ReactToDoList
         {
             GlobalConfiguration.Configure(WebApiConfig.Register);
         }
+
+        protected void Application_Error(object sender, EventArgs e)
+        {
+            //Omitted
+        }
     }
 }
