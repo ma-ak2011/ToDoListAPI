@@ -27,9 +27,6 @@ namespace ToDoList
             {
                 context.ToDos.Add(new ToDo
                 {
-                    Id = context.ToDos.Any()
-                        ? context.ToDos.Max(t => t.Id) + 1
-                        : 0,
                     Title = title,
                     Content = content
                 });
